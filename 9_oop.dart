@@ -1,6 +1,8 @@
 //
 void main() {
   Dog dog = Dog();
+
+  Car car = Car("Red", 2002, name: "Toyota");
 }
 
 class Animal {
@@ -87,9 +89,6 @@ class Dog extends Animal {
   }
 }
 
-
-
-
 // abstract class Vehicle {
 //   // Abstract method
 //   void start();
@@ -99,7 +98,7 @@ class Dog extends Animal {
 
 // class Car extends Vehicle {
 //   // Implementation of start()
-  
+
 //   @override
 //   void start() {
 //     print('Car started');
@@ -126,24 +125,25 @@ class Dog extends Animal {
 //   }
 // }
 
-
-
-
 abstract class Vehicle {
   void start();
   void stop();
+  const Vehicle(); // constructor
 }
+
 // implements interface
 class Car implements Vehicle {
-  @override
-  void start() {
-    print('Car started');
-  }
+  static const int wheels = 4; // static variable
+  final String color; // final variable
+  final String? name;
+  final int year; // final variable
+  const Car(this.color, this.year, {required this.name}); // constructor
 
   @override
-  void stop() {
-    print('Car stopped');
-  }
+  void start() {}
+
+  @override
+  void stop() {}
 }
 
 // void main() {
