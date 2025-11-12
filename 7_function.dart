@@ -4,15 +4,17 @@ void main() {
   int randomNumber = Random().nextInt(10); // from 0 to 9 included
   print("Generated Random Number Between 0 to 9: $randomNumber");
 
-  var randomNumber2 = Random().nextBool();// from 1 to 10 included
+  var randomNumber2 = Random().nextBool(); // from 1 to 10 included
   print("Generated Random Number Between 1 to 22: $randomNumber2");
 }
 
-int add(int a, int b) {
+int add(int a, int b)  {
   var total;
   total = a + b;
   return total;
 }
+
+int addarrow(int a, int b) => a + b;
 
 // parameter and no return type
 void mul(int a, int b) {
@@ -43,7 +45,6 @@ void printInfo({String? name, String? gender}) {
   print("Hello $name your gender is $gender.");
 }
 
-// anonymous function
 //arrow function
 int sub(int n1, int n2) => n1 == 2 ? n1 - n2 : n2 - n1;
 double div(int n1, int n2) => n1 / n2;

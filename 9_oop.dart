@@ -3,6 +3,20 @@ void main() {
   Dog dog = Dog();
 
   Car car = Car("Red", 2002, name: "Toyota");
+  final Anime naruto = Anime(
+    name: "naruto",
+    genre: "Action",
+    studio: "Studio Pierrot",
+  );
+  naruto.name.capitalize();
+
+
+  
+
+
+
+  Box<int> intBox = Box<int>();
+  intBox.value = 10;
 }
 
 class Animal {
@@ -152,10 +166,6 @@ class Car implements Vehicle {
 //   car.stop();
 // }
 
-
-
-
-
 // mixin CanFly {
 //   void fly() {
 //     print('I can fly');
@@ -169,5 +179,41 @@ class Car implements Vehicle {
 // }
 
 // class Bird with CanFly, CanWalk {
- 
+
 // }
+
+class Anime {
+  final String name;
+  final String genre;
+  final String studio;
+  Anime({required this.name, required this.genre, this.studio = "Unknown"});
+
+  factory Anime.fromMap(Map<String, String> data) {
+    return Anime(
+      name: data['name'] ?? 'Unknown',
+      genre: data['genre'] ?? 'Unknown',
+      studio: data['studio'] ?? 'Unknown',
+    );
+  }
+}
+
+class Box<T> {
+  T? value;
+
+  get setValue => value;
+}
+
+class Boxe {
+  dynamic value;
+}
+
+
+
+extension StringExtension on String {
+  // Add method to capitalize first letter
+  String capitalize() {
+    if (isEmpty) return this;
+    return this[0].toUpperCase() + substring(1);
+  }
+}
+

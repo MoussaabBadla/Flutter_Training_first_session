@@ -23,21 +23,21 @@ void main() {
   //   print(i);
   // }
 
-  // for (int i = 10; i >= 1; i--) {
-  //   if (i == 4) {
-  //     continue;
-  //   }
-  //   print(i);
-  // }
-  // iloop:
-  // for (var i = 0; i < 10; i++) {
-  //   for (var j = 0; j < 10; j++) {
-  //     print(j);
-  //     if (j == 2) {
-  //       break iloop ;
-  //     }
-  //   }
-  // }
+  for (int i = 10; i >= 1; i--) {
+    if (i == 4) {
+      continue;
+    }
+    print(i);
+  }
+  iloop:
+  for (var i = 0; i < 10; i++) {
+    for (var j = 0; j < 10; j++) {
+      print(j);
+      if (j == 2) {
+        break iloop ;
+      }
+    }
+  }
 
   //   int a = 12;
   // int b = 0;

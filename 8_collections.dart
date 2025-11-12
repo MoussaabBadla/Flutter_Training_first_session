@@ -1,5 +1,5 @@
 void main() {
-  List<int> ages = [10, 30, 23];
+  List ages = [10, 30, 23];
 // String List
   List<String> names = ["Raj", "John", "Rocky"];
 // Mixed List

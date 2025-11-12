@@ -1,10 +1,14 @@
 void main() {
   int age = 12;
-  // if (age >= 18) {
-  //   print("You are voter.");
-  // } else {
-  //   print("You are not voter.");
-  // }
+  if (age >= 18) {
+    print("You are voter.");
+  } else {
+    print("You are not voter.");
+  }
+  age == 18
+      ? print("You are voter.")
+      : print("You are not voter.");
+
   int noOfMonth = 5;
 
   if (noOfMonth == 1) {
@@ -36,6 +40,7 @@ void main() {
     print("Invalid option given.");
   }
 
+  
   // assert(age != 22, "Age must be 22");
 
     var dayOfWeek = 5;
